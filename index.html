@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Akhil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Music Playlist</h1>
+  <p>Listen!!</p> 
+</div>
+<div class="container">
+  <div class="row" id="demo">
+   
+  </div>
+</div>
+<script>
+  var songs =[
+  "Super_Nova",
+  "Naan_Naan",
+  "Arabic_Kuthu",
+  "Mehabooba",
+  "Unfinished_Hope",
+  "Gaganam_Nee",
+  "Melliname",
+  "Minnalai_Pidithu",
+  "Oru_Chik_Chik",
+  "Parayuvaan",
+  "Thattum_muttum",
+  "Karuppinazhaku",
+  "Ranam",
+  "Manikyachirakulla",
+  "Be_Notorious",
+  "Rathipushpam",
+  "Jillam_Jillala"
+  ]
+  var x ="", i;
+for (i=0; i<songs.length; i++) {
+x = x + `<div class="col-sm-4">
+    <h3>${songs[i]}</h3>
+    <p>
+      <audio controls>
+          <source src=${songs[i]+".mp3"}>
+        </audio>
+    </p>
+  </div>`
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+<style>
+</style>
+</body>
+</html>
